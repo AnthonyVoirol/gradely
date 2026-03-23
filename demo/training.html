@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradely — Entraînements</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-mark">G</div>
+      <span class="sidebar-logo-text">Gradely</span>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section-label">Principal</div>
+      <a href="dashboard.html" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Tableau de bord
+      </a>
+      <a href="notes.html" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Notes
+      </a>
+      <a href="stats.html" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Statistiques
+      </a>
+      <div class="sidebar-section-label">Apprentissage</div>
+      <a href="ai.html" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Assistant IA
+        <span class="tag tag-new" style="margin-left:auto; padding:2px 7px; font-size:0.6rem;">NEW</span>
+      </a>
+      <a href="training.html" class="nav-item active">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        Entraînements
+      </a>
+      <div class="sidebar-section-label">Compte</div>
+      <a href="#" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+        Profil
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">LM</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name">Lucas Meier</div>
+          <div class="sidebar-user-role">Gymnase · 3ème année</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+    <div class="topbar">
+      <span class="topbar-title">Entraînements &amp; Quiz</span>
+      <div class="topbar-actions">
+        <div class="topbar-search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Rechercher un quiz...">
+        </div>
+      </div>
+    </div>
+
+    <div class="page-content">
+
+      <!-- Priority banner -->
+      <div class="reveal" style="margin-bottom:28px; padding:20px 24px; background:var(--c-black); border-radius:var(--radius-lg); display:flex; align-items:center; justify-content:space-between; gap:20px;">
+        <div>
+          <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--c-accent); margin-bottom:6px;">Prioritaire</div>
+          <div style="font-weight:700; color:white; font-size:1rem; margin-bottom:4px;">Examen Histoire dans 4 jours — Commence maintenant</div>
+          <div style="font-size:0.82rem; color:rgba(255,255,255,0.5);">3 quiz disponibles · Moyenne actuelle : 3.5 · Objectif : 4.5</div>
+        </div>
+        <a href="quiz.html" class="btn btn-accent" style="white-space:nowrap; flex-shrink:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Démarrer
+        </a>
+      </div>
+
+      <!-- Filters -->
+      <div class="reveal" style="display:flex; align-items:center; gap:8px; margin-bottom:24px; flex-wrap:wrap;">
+        <button class="btn btn-sm" style="background:var(--c-black); color:white;">Tous</button>
+        <button class="btn btn-outline btn-sm">Histoire</button>
+        <button class="btn btn-outline btn-sm">Mathématiques</button>
+        <button class="btn btn-outline btn-sm">Physique</button>
+        <button class="btn btn-outline btn-sm">Français</button>
+        <button class="btn btn-outline btn-sm">Anglais</button>
+        <div class="divider-v" style="height:24px; margin:0 4px;"></div>
+        <button class="btn btn-outline btn-sm">Recommandés</button>
+        <button class="btn btn-outline btn-sm">Déjà faits</button>
+      </div>
+
+      <!-- Recommended section -->
+      <div class="section-header reveal">
+        <h2>Recommandés pour toi</h2>
+        <span class="t-label">Basé sur tes lacunes</span>
+      </div>
+
+      <div class="grid-3 stagger-parent" style="margin-bottom:36px;">
+
+        <div style="background:var(--c-surface); border:1.5px solid var(--c-accent); border-radius:var(--radius-lg); overflow:hidden; position:relative;">
+          <div style="position:absolute; top:12px; right:12px;"><span class="tag tag-fail">Critique</span></div>
+          <div style="padding:24px; border-bottom:1px solid var(--c-border);">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+              <div style="width:36px; height:36px; background:#fbe5e1; border-radius:var(--radius); display:flex; align-items:center; justify-content:center; color:var(--c-accent);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <div>
+                <div style="font-size:0.75rem; color:var(--c-muted);">Histoire</div>
+                <div style="font-size:0.95rem; font-weight:700; letter-spacing:-0.02em;">Révolution française</div>
+              </div>
+            </div>
+            <p style="font-size:0.82rem; color:var(--c-muted); line-height:1.6; margin-bottom:16px;">Les causes, les grandes étapes et les figures clés. Indispensable pour l'examen du 18 nov.</p>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
+              <span class="tag tag-default">20 questions</span>
+              <span class="tag tag-default">15 min</span>
+              <span class="tag tag-warn">Difficile</span>
+            </div>
+            <div style="margin-bottom:4px;">
+              <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--c-muted); margin-bottom:5px;">
+                <span>Progression</span><span>0 / 3 tentatives</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill accent" data-width="0%"></div>
+              </div>
+            </div>
+          </div>
+          <div style="padding:14px 24px;">
+            <a href="quiz.html" class="btn btn-accent" style="width:100%; justify-content:center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Commencer le quiz
+            </a>
+          </div>
+        </div>
+
+        <div style="background:var(--c-surface); border:1px solid var(--c-border); border-radius:var(--radius-lg); overflow:hidden;">
+          <div style="padding:24px; border-bottom:1px solid var(--c-border);">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+              <div style="width:36px; height:36px; background:#fef3dc; border-radius:var(--radius); display:flex; align-items:center; justify-content:center; color:#b07d2a;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <div>
+                <div style="font-size:0.75rem; color:var(--c-muted);">Physique</div>
+                <div style="font-size:0.95rem; font-weight:700; letter-spacing:-0.02em;">Mécanique newtonienne</div>
+              </div>
+            </div>
+            <p style="font-size:0.82rem; color:var(--c-muted); line-height:1.6; margin-bottom:16px;">Les 3 lois de Newton et leurs applications. Quiz axé sur les calculs de force et accélération.</p>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
+              <span class="tag tag-default">15 questions</span>
+              <span class="tag tag-default">12 min</span>
+              <span class="tag tag-default">Moyen</span>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--c-muted); margin-bottom:5px;">
+                <span>Meilleur score</span><span>7 / 15</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill amber" data-width="47%"></div>
+              </div>
+            </div>
+          </div>
+          <div style="padding:14px 24px;">
+            <a href="quiz.html" class="btn btn-outline" style="width:100%; justify-content:center;">
+              Réessayer (2ème tentative)
+            </a>
+          </div>
+        </div>
+
+        <div style="background:var(--c-surface); border:1px solid var(--c-border); border-radius:var(--radius-lg); overflow:hidden;">
+          <div style="padding:24px; border-bottom:1px solid var(--c-border);">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+              <div style="width:36px; height:36px; background:#dde8f5; border-radius:var(--radius); display:flex; align-items:center; justify-content:center; color:#1a3a5c;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+              <div>
+                <div style="font-size:0.75rem; color:var(--c-muted);">Mathématiques</div>
+                <div style="font-size:0.95rem; font-weight:700; letter-spacing:-0.02em;">Algèbre linéaire — bases</div>
+              </div>
+            </div>
+            <p style="font-size:0.82rem; color:var(--c-muted); line-height:1.6; margin-bottom:16px;">Vecteurs, matrices et systèmes d'équations. Préparation pour le test du 22 novembre.</p>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
+              <span class="tag tag-default">25 questions</span>
+              <span class="tag tag-default">20 min</span>
+              <span class="tag tag-info">Avancé</span>
+            </div>
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--c-muted); margin-bottom:5px;">
+                <span>Pas encore tenté</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" data-width="0%"></div>
+              </div>
+            </div>
+          </div>
+          <div style="padding:14px 24px;">
+            <a href="quiz.html" class="btn btn-primary" style="width:100%; justify-content:center;">Commencer</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- All quizzes -->
+      <div class="section-header reveal">
+        <h2>Tous les entraînements</h2>
+        <span style="font-size:0.8rem; color:var(--c-muted);">14 disponibles</span>
+      </div>
+
+      <div class="table-wrap reveal">
+        <table>
+          <thead>
+            <tr>
+              <th>Titre</th>
+              <th>Branche</th>
+              <th>Difficulté</th>
+              <th>Questions</th>
+              <th>Durée</th>
+              <th>Score</th>
+              <th>Statut</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight:600;">La Terreur (1793–1794)</td>
+              <td><span class="tag tag-default">Histoire</span></td>
+              <td><span class="tag tag-warn">Moyen</span></td>
+              <td class="t-mono">12</td>
+              <td class="t-mono">10 min</td>
+              <td class="t-mono">—</td>
+              <td><span class="tag tag-default">Non commencé</span></td>
+              <td><a href="quiz.html" class="btn btn-outline btn-sm">Démarrer</a></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Figures de la Révolution</td>
+              <td><span class="tag tag-default">Histoire</span></td>
+              <td><span class="tag tag-default">Facile</span></td>
+              <td class="t-mono">10</td>
+              <td class="t-mono">8 min</td>
+              <td class="t-mono">—</td>
+              <td><span class="tag tag-default">Non commencé</span></td>
+              <td><a href="quiz.html" class="btn btn-outline btn-sm">Démarrer</a></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Dérivées et limites</td>
+              <td><span class="tag tag-default">Maths</span></td>
+              <td><span class="tag tag-fail">Difficile</span></td>
+              <td class="t-mono">20</td>
+              <td class="t-mono">18 min</td>
+              <td class="t-mono">14/20</td>
+              <td><span class="tag tag-pass">Terminé</span></td>
+              <td><a href="quiz.html" class="btn btn-ghost btn-sm">Refaire</a></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Grammaire anglaise — temps</td>
+              <td><span class="tag tag-default">Anglais</span></td>
+              <td><span class="tag tag-default">Moyen</span></td>
+              <td class="t-mono">15</td>
+              <td class="t-mono">12 min</td>
+              <td class="t-mono">11/15</td>
+              <td><span class="tag tag-pass">Terminé</span></td>
+              <td><a href="quiz.html" class="btn btn-ghost btn-sm">Refaire</a></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Optique géométrique</td>
+              <td><span class="tag tag-default">Physique</span></td>
+              <td><span class="tag tag-warn">Moyen</span></td>
+              <td class="t-mono">15</td>
+              <td class="t-mono">13 min</td>
+              <td class="t-mono">8/15</td>
+              <td><span class="tag tag-warn">En cours</span></td>
+              <td><a href="quiz.html" class="btn btn-outline btn-sm">Reprendre</a></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Conjugaison — subjonctif</td>
+              <td><span class="tag tag-default">Français</span></td>
+              <td><span class="tag tag-default">Facile</span></td>
+              <td class="t-mono">12</td>
+              <td class="t-mono">10 min</td>
+              <td class="t-mono">10/12</td>
+              <td><span class="tag tag-pass">Terminé</span></td>
+              <td><a href="quiz.html" class="btn btn-ghost btn-sm">Refaire</a></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600;">Trigonométrie — cercle unitaire</td>
+              <td><span class="tag tag-default">Maths</span></td>
+              <td><span class="tag tag-fail">Difficile</span></td>
+              <td class="t-mono">18</td>
+              <td class="t-mono">16 min</td>
+              <td class="t-mono">—</td>
+              <td><span class="tag tag-default">Non commencé</span></td>
+              <td><a href="quiz.html" class="btn btn-outline btn-sm">Démarrer</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </main>
+
+</div>
+<script src="animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradely — Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-mark">G</div>
+      <span class="sidebar-logo-text">Gradely</span>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section-label">Principal</div>
+      <a href="dashboard.html" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Tableau de bord
+      </a>
+      <a href="notes.html" class="nav-item active">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Notes
+      </a>
+      <a href="stats.html" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Statistiques
+      </a>
+      <div class="sidebar-section-label">Apprentissage</div>
+      <a href="ai.html" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Assistant IA
+        <span class="tag tag-new" style="margin-left:auto; padding:2px 7px; font-size:0.6rem;">NEW</span>
+      </a>
+      <a href="training.html" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        Entraînements
+      </a>
+      <div class="sidebar-section-label">Compte</div>
+      <a href="#" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+        Profil
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">LM</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name">Lucas Meier</div>
+          <div class="sidebar-user-role">Gymnase · 3ème année</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+    <div class="topbar">
+      <span class="topbar-title">Notes</span>
+      <div class="topbar-actions">
+        <div class="topbar-search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Rechercher une note...">
+        </div>
+      </div>
+    </div>
+
+    <div class="page-content">
+
+      <div class="grid-2" style="margin-bottom:28px; align-items:start;">
+
+        <!-- Add note form -->
+        <div class="card reveal">
+          <div style="margin-bottom:20px;">
+            <h2 style="font-size:1rem; font-weight:700; letter-spacing:-0.02em; margin-bottom:4px;">Ajouter une note</h2>
+            <p style="font-size:0.8rem; color:var(--c-muted);">Les champs obligatoires sont indiqués.</p>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div class="form-group">
+              <label class="form-label">Branche *</label>
+              <select class="form-select">
+                <option value="">Sélectionner une branche...</option>
+                <option>Mathématiques</option>
+                <option>Physique</option>
+                <option>Français</option>
+                <option>Histoire</option>
+                <option>Anglais</option>
+                <option>Biologie</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Type d'évaluation *</label>
+              <select class="form-select">
+                <option value="">Sélectionner un type...</option>
+                <option>Examen écrit</option>
+                <option>Test</option>
+                <option>Travail pratique (TP)</option>
+                <option>Oral</option>
+                <option>Devoir maison</option>
+                <option>Participation</option>
+              </select>
+            </div>
+            <div class="grid-2" style="gap:12px;">
+              <div class="form-group">
+                <label class="form-label">Note obtenue *</label>
+                <input type="number" class="form-input" placeholder="ex. 5.25" min="1" max="6" step="0.25">
+                <span class="form-hint">Entre 1.0 et 6.0</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Coefficient</label>
+                <input type="number" class="form-input" placeholder="ex. 2" min="0.5" max="4" step="0.5" value="1">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Date de l'évaluation *</label>
+              <input type="date" class="form-input" value="2024-11-14">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Commentaire (optionnel)</label>
+              <input type="text" class="form-input" placeholder="ex. Chapitre 3 — Trigonométrie">
+            </div>
+            <button class="btn btn-accent" style="width:100%; justify-content:center; margin-top:4px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Enregistrer la note
+            </button>
+          </div>
+
+          <!-- Branch quick summary -->
+          <div class="divider"></div>
+          <div style="font-size:0.78rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--c-muted); margin-bottom:12px;">Résumé par branche</div>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div class="flex-between">
+              <span style="font-size:0.85rem; font-weight:500;">Mathématiques</span>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-family:var(--f-mono); font-size:0.85rem;">5.3</span>
+                <span class="tag tag-pass" style="padding:2px 7px;">6 notes</span>
+              </div>
+            </div>
+            <div class="flex-between">
+              <span style="font-size:0.85rem; font-weight:500;">Physique</span>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-family:var(--f-mono); font-size:0.85rem;">4.5</span>
+                <span class="tag tag-warn" style="padding:2px 7px;">4 notes</span>
+              </div>
+            </div>
+            <div class="flex-between">
+              <span style="font-size:0.85rem; font-weight:500;">Français</span>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-family:var(--f-mono); font-size:0.85rem;">5.6</span>
+                <span class="tag tag-pass" style="padding:2px 7px;">5 notes</span>
+              </div>
+            </div>
+            <div class="flex-between">
+              <span style="font-size:0.85rem; font-weight:500;">Histoire</span>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-family:var(--f-mono); font-size:0.85rem; color:var(--c-accent);">3.5</span>
+                <span class="tag tag-fail" style="padding:2px 7px;">3 notes</span>
+              </div>
+            </div>
+            <div class="flex-between">
+              <span style="font-size:0.85rem; font-weight:500;">Anglais</span>
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-family:var(--f-mono); font-size:0.85rem;">5.0</span>
+                <span class="tag tag-pass" style="padding:2px 7px;">4 notes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notes list -->
+        <div style="display:flex; flex-direction:column; gap:20px;">
+
+          <!-- Filters -->
+          <div class="card card-sm reveal" style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+            <span style="font-size:0.78rem; font-weight:700; color:var(--c-muted);">FILTRER :</span>
+            <button class="btn btn-sm" style="background:var(--c-black); color:white; padding:5px 14px;">Toutes (18)</button>
+            <button class="btn btn-outline btn-sm">Maths (6)</button>
+            <button class="btn btn-outline btn-sm">Physique (4)</button>
+            <button class="btn btn-outline btn-sm">Français (5)</button>
+            <button class="btn btn-outline btn-sm">Histoire (3)</button>
+            <button class="btn btn-outline btn-sm">Anglais (4)</button>
+            <div style="margin-left:auto;">
+              <select class="form-select" style="padding:5px 10px; font-size:0.8rem;">
+                <option>Plus récentes d'abord</option>
+                <option>Plus anciennes d'abord</option>
+                <option>Note croissante</option>
+                <option>Note décroissante</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="table-wrap reveal">
+            <table>
+              <thead>
+                <tr>
+                  <th>Branche</th>
+                  <th>Type</th>
+                  <th>Note</th>
+                  <th>Coef.</th>
+                  <th>Date</th>
+                  <th>Impact</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span style="font-weight:600;">Mathématiques</span></td>
+                  <td><span class="tag tag-default">Test écrit</span></td>
+                  <td><span class="grade-badge pass" style="width:36px;height:36px;font-size:0.85rem;">5.5</span></td>
+                  <td><span class="t-mono">x2</span></td>
+                  <td style="color:var(--c-muted); font-size:0.82rem;">14 nov. 2024</td>
+                  <td><span class="tag tag-pass">+0.2</span></td>
+                  <td><button class="btn btn-ghost btn-sm">···</button></td>
+                </tr>
+                <tr>
+                  <td><span style="font-weight:600;">Histoire</span></td>
+                  <td><span class="tag tag-default">Oral</span></td>
+                  <td><span class="grade-badge fail" style="width:36px;height:36px;font-size:0.85rem;">3.0</span></td>
+                  <td><span class="t-mono">x1</span></td>
+                  <td style="color:var(--c-muted); font-size:0.82rem;">12 nov. 2024</td>
+                  <td><span class="tag tag-fail">-0.4</span></td>
+                  <td><button class="btn btn-ghost btn-sm">···</button></td>
+                </tr>
+                <tr>
+                  <td><span style="font-weight:600;">Physique</span></td>
+                  <td><span class="tag tag-default">TP</span></td>
+                  <td><span class="grade-badge near" style="width:36px;height:36px;font-size:0.85rem;">4.0</span></td>
+                  <td><span class="t-mono">x1.5</span></td>
+                  <td style="color:var(--c-muted); font-size:0.82rem;">8 nov. 2024</td>
+                  <td><span class="tag tag-warn">-0.1</span></td>
+                  <td><button class="btn btn-ghost btn-sm">···</button></td>
+                </tr>
+                <tr>
+                  <td><span style="font-weight:600;">Français</span></td>
+                  <td><span class="tag tag-default">Dictée</span></td>
+                  <td><span class="grade-badge pass" style="width:36px;height:36px;font-size:0.85rem;">5.8</span></td>
+                  <td><span class="t-mono">x1</span></td>
+                  <td style="color:var(--c-muted); font-size:0.82rem;">5 nov. 2024</td>
+                  <td><span class="tag tag-pass">+0.1</span></td>
+                  <td><button class="btn btn-ghost btn-sm">···</button></td>
+                </tr>
+                <tr>
+                  <td><span style="font-weight:600;">Anglais</span></td>
+                  <td><span class="tag tag-default">Examen écrit</span></td>
+                  <td><span class="grade-badge pass" style="width:36px;height:36px;font-size:0.85rem;">5.0</span></td>
+                  <td><span class="t-mono">x2</span></td>
+                  <td style="color:var(--c-muted); font-size:0.82rem;">1 nov. 2024</td>
+                  <td><span class="tag tag-default">~</span></td>
+                  <td><button class="btn btn-ghost btn-sm">···</button></td>
+                </tr>
+                <tr>
+                  <td><span style="font-weight:600;">Mathématiques</span></td>
+                  <td><span class="tag tag-default">Examen</span></td>
+                  <td><span class="grade-badge pass" style="width:36px;height:36px;font-size:0.85rem;">5.0</span></td>
+                  <td><span class="t-mono">x3</span></td>
+                  <td style="color:var(--c-muted); font-size:0.82rem;">28 oct. 2024</td>
+                  <td><span class="tag tag-default">~</span></td>
+                  <td><button class="btn btn-ghost btn-sm">···</button></td>
+                </tr>
+                <tr>
+                  <td><span style="font-weight:600;">Histoire</span></td>
+                  <td><span class="tag tag-default">Test</span></td>
+                  <td><span class="grade-badge near" style="width:36px;height:36px;font-size:0.85rem;">4.0</span></td>
+                  <td><span class="t-mono">x1</span></td>
+                  <td style="color:var(--c-muted); font-size:0.82rem;">24 oct. 2024</td>
+                  <td><span class="tag tag-warn">-0.2</span></td>
+                  <td><button class="btn btn-ghost btn-sm">···</button></td>
+                </tr>
+                <tr>
+                  <td><span style="font-weight:600;">Physique</span></td>
+                  <td><span class="tag tag-default">Examen</span></td>
+                  <td><span class="grade-badge pass" style="width:36px;height:36px;font-size:0.85rem;">5.5</span></td>
+                  <td><span class="t-mono">x2</span></td>
+                  <td style="color:var(--c-muted); font-size:0.82rem;">20 oct. 2024</td>
+                  <td><span class="tag tag-pass">+0.4</span></td>
+                  <td><button class="btn btn-ghost btn-sm">···</button></td>
+                </tr>
+                <tr>
+                  <td><span style="font-weight:600;">Français</span></td>
+                  <td><span class="tag tag-default">Oral</span></td>
+                  <td><span class="grade-badge pass" style="width:36px;height:36px;font-size:0.85rem;">5.5</span></td>
+                  <td><span class="t-mono">x1.5</span></td>
+                  <td style="color:var(--c-muted); font-size:0.82rem;">18 oct. 2024</td>
+                  <td><span class="tag tag-pass">+0.2</span></td>
+                  <td><button class="btn btn-ghost btn-sm">···</button></td>
+                </tr>
+                <tr>
+                  <td><span style="font-weight:600;">Mathématiques</span></td>
+                  <td><span class="tag tag-default">Devoir maison</span></td>
+                  <td><span class="grade-badge pass" style="width:36px;height:36px;font-size:0.85rem;">6.0</span></td>
+                  <td><span class="t-mono">x1</span></td>
+                  <td style="color:var(--c-muted); font-size:0.82rem;">14 oct. 2024</td>
+                  <td><span class="tag tag-pass">+0.1</span></td>
+                  <td><button class="btn btn-ghost btn-sm">···</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:0 4px;">
+            <span style="font-size:0.8rem; color:var(--c-muted);">Affichage de 10 sur 18 notes</span>
+            <div style="display:flex; gap:8px;">
+              <button class="btn btn-outline btn-sm">Précédent</button>
+              <button class="btn btn-primary btn-sm">Suivant</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</div>
+<script src="animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradely — Tableau de bord</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-mark">G</div>
+      <span class="sidebar-logo-text">Gradely</span>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section-label">Principal</div>
+      <a href="dashboard.html" class="nav-item active">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Tableau de bord
+      </a>
+      <a href="notes.html" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Notes
+      </a>
+      <a href="stats.html" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Statistiques
+      </a>
+      <div class="sidebar-section-label">Apprentissage</div>
+      <a href="ai.html" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Assistant IA
+        <span class="tag tag-new" style="margin-left:auto; padding:2px 7px; font-size:0.6rem;">NEW</span>
+      </a>
+      <a href="training.html" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        Entraînements
+      </a>
+      <div class="sidebar-section-label">Compte</div>
+      <a href="#" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+        Profil
+      </a>
+      <a href="#" class="nav-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        Paramètres
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">LM</div>
+        <div class="sidebar-user-info">
+          <div class="sidebar-user-name">Lucas Meier</div>
+          <div class="sidebar-user-role">Gymnase · 3ème année</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+    <div class="topbar">
+      <span class="topbar-title">Tableau de bord</span>
+      <div class="topbar-actions">
+        <div class="topbar-search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Rechercher...">
+        </div>
+        <a href="notes.html" class="btn btn-accent btn-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Ajouter une note
+        </a>
+      </div>
+    </div>
+
+    <div class="page-content">
+
+      <!-- Welcome -->
+      <div class="reveal" style="margin-bottom:28px;">
+        <h1 style="font-size:1.4rem; font-weight:700; letter-spacing:-0.03em; margin-bottom:4px;">Bonjour, Lucas.</h1>
+        <p style="color:var(--c-muted); font-size:0.875rem;">Semestre 2 — Gymnase de Nyon &nbsp;·&nbsp; Semaine 14 sur 20</p>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="grid-4" style="margin-bottom:28px;">
+        <div class="stat-card accent-top">
+          <div class="stat-value"><span data-count="5.2">5.2</span></div>
+          <div class="stat-label">Moyenne générale</div>
+          <div class="stat-delta up">+0.3 ce mois</div>
+        </div>
+        <div class="stat-card accent-blue">
+          <div class="stat-value"><span data-count="18">18</span></div>
+          <div class="stat-label">Notes enregistrées</div>
+          <div class="stat-delta up">+4 cette semaine</div>
+        </div>
+        <div class="stat-card accent-green">
+          <div class="stat-value"><span data-count="6">6</span></div>
+          <div class="stat-label">Branches suivies</div>
+          <div class="stat-delta" style="color:var(--c-muted);">4 branches au-dessus de 5.0</div>
+        </div>
+        <div class="stat-card accent-amber">
+          <div class="stat-value"><span data-count="2">2</span></div>
+          <div class="stat-label">Objectifs atteints</div>
+          <div class="stat-delta down">1 branche à risque</div>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-bottom:28px;">
+
+        <!-- Branches overview -->
+        <div class="card">
+          <div class="section-header">
+            <h2>Branches &amp; Moyennes</h2>
+            <a href="notes.html">Voir toutes</a>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:14px;">
+            <div class="flex-between">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div class="grade-badge pass">5.3</div>
+                <div>
+                  <div style="font-size:0.875rem; font-weight:600;">Mathématiques</div>
+                  <div style="font-size:0.75rem; color:var(--c-muted);">6 notes &nbsp;·&nbsp; Coef. 4</div>
+                </div>
+              </div>
+              <span class="tag tag-pass">En cible</span>
+            </div>
+            <div class="divider" style="margin:0;"></div>
+            <div class="flex-between">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div class="grade-badge near">4.5</div>
+                <div>
+                  <div style="font-size:0.875rem; font-weight:600;">Physique</div>
+                  <div style="font-size:0.75rem; color:var(--c-muted);">4 notes &nbsp;·&nbsp; Coef. 3</div>
+                </div>
+              </div>
+              <span class="tag tag-warn">Attention</span>
+            </div>
+            <div class="divider" style="margin:0;"></div>
+            <div class="flex-between">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div class="grade-badge pass">5.6</div>
+                <div>
+                  <div style="font-size:0.875rem; font-weight:600;">Français</div>
+                  <div style="font-size:0.75rem; color:var(--c-muted);">5 notes &nbsp;·&nbsp; Coef. 3</div>
+                </div>
+              </div>
+              <span class="tag tag-pass">En cible</span>
+            </div>
+            <div class="divider" style="margin:0;"></div>
+            <div class="flex-between">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div class="grade-badge fail">3.5</div>
+                <div>
+                  <div style="font-size:0.875rem; font-weight:600;">Histoire</div>
+                  <div style="font-size:0.75rem; color:var(--c-muted);">3 notes &nbsp;·&nbsp; Coef. 2</div>
+                </div>
+              </div>
+              <span class="tag tag-fail">A risque</span>
+            </div>
+            <div class="divider" style="margin:0;"></div>
+            <div class="flex-between">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div class="grade-badge pass">5.0</div>
+                <div>
+                  <div style="font-size:0.875rem; font-weight:600;">Anglais</div>
+                  <div style="font-size:0.75rem; color:var(--c-muted);">4 notes &nbsp;·&nbsp; Coef. 2</div>
+                </div>
+              </div>
+              <span class="tag tag-pass">En cible</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div style="display:flex; flex-direction:column; gap:24px;">
+
+          <!-- Recent notes -->
+          <div class="card">
+            <div class="section-header">
+              <h2>Notes récentes</h2>
+              <a href="notes.html">Voir toutes</a>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:0;">
+              <div style="display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid var(--c-border);">
+                <div class="grade-badge pass" style="width:36px; height:36px; font-size:0.85rem;">5.5</div>
+                <div style="flex:1;">
+                  <div style="font-size:0.85rem; font-weight:600;">Test écrit — Mathématiques</div>
+                  <div style="font-size:0.75rem; color:var(--c-muted);">14 nov. &nbsp;·&nbsp; Coef. 2</div>
+                </div>
+                <span class="tag tag-pass">+0.2</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid var(--c-border);">
+                <div class="grade-badge fail" style="width:36px; height:36px; font-size:0.85rem;">3.0</div>
+                <div style="flex:1;">
+                  <div style="font-size:0.85rem; font-weight:600;">Oral — Histoire</div>
+                  <div style="font-size:0.75rem; color:var(--c-muted);">12 nov. &nbsp;·&nbsp; Coef. 1</div>
+                </div>
+                <span class="tag tag-fail">-0.4</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid var(--c-border);">
+                <div class="grade-badge near" style="width:36px; height:36px; font-size:0.85rem;">4.0</div>
+                <div style="flex:1;">
+                  <div style="font-size:0.85rem; font-weight:600;">TP — Physique</div>
+                  <div style="font-size:0.75rem; color:var(--c-muted);">8 nov. &nbsp;·&nbsp; Coef. 1.5</div>
+                </div>
+                <span class="tag tag-warn">-0.1</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; padding:10px 0;">
+                <div class="grade-badge pass" style="width:36px; height:36px; font-size:0.85rem;">5.8</div>
+                <div style="flex:1;">
+                  <div style="font-size:0.85rem; font-weight:600;">Dictée — Français</div>
+                  <div style="font-size:0.75rem; color:var(--c-muted);">5 nov. &nbsp;·&nbsp; Coef. 1</div>
+                </div>
+                <span class="tag tag-pass">+0.1</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming -->
+          <div class="card">
+            <div class="section-header">
+              <h2>Prochaines évaluations</h2>
+              <button class="btn btn-ghost btn-sm">Gérer</button>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <div style="display:flex; align-items:center; gap:12px; padding:12px; background:var(--c-paper); border-radius:var(--radius); border:1px solid var(--c-border);">
+                <div style="width:36px; height:36px; background:var(--c-accent); border-radius:var(--radius); display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                  <span style="font-size:0.6rem; font-weight:700; color:rgba(255,255,255,0.7); line-height:1;">NOV</span>
+                  <span style="font-size:0.85rem; font-weight:700; color:white; line-height:1;">18</span>
+                </div>
+                <div style="flex:1;">
+                  <div style="font-size:0.85rem; font-weight:600;">Examen final — Histoire</div>
+                  <div style="font-size:0.75rem; color:var(--c-muted);">Coef. 3 &nbsp;·&nbsp; Branche à risque</div>
+                </div>
+                <span class="tag tag-fail">J-4</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; padding:12px; background:var(--c-paper); border-radius:var(--radius); border:1px solid var(--c-border);">
+                <div style="width:36px; height:36px; background:var(--c-accent2); border-radius:var(--radius); display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                  <span style="font-size:0.6rem; font-weight:700; color:rgba(255,255,255,0.7); line-height:1;">NOV</span>
+                  <span style="font-size:0.85rem; font-weight:700; color:white; line-height:1;">22</span>
+                </div>
+                <div style="flex:1;">
+                  <div style="font-size:0.85rem; font-weight:600;">Test — Mathématiques</div>
+                  <div style="font-size:0.75rem; color:var(--c-muted);">Coef. 2 &nbsp;·&nbsp; Algèbre linéaire</div>
+                </div>
+                <span class="tag tag-warn">J-8</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px; padding:12px; background:var(--c-paper); border-radius:var(--radius); border:1px solid var(--c-border);">
+                <div style="width:36px; height:36px; background:#2a7a4b; border-radius:var(--radius); display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                  <span style="font-size:0.6rem; font-weight:700; color:rgba(255,255,255,0.7); line-height:1;">DEC</span>
+                  <span style="font-size:0.85rem; font-weight:700; color:white; line-height:1;">03</span>
+                </div>
+                <div style="flex:1;">
+                  <div style="font-size:0.85rem; font-weight:600;">Rédaction — Français</div>
+                  <div style="font-size:0.75rem; color:var(--c-muted);">Coef. 1.5 &nbsp;·&nbsp; Branche forte</div>
+                </div>
+                <span class="tag tag-pass">J-19</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom row: suggestions -->
+      <div class="card">
+        <div class="section-header">
+          <h2>Recommandations Gradely</h2>
+          <span class="tag tag-new">IA</span>
+        </div>
+        <div class="grid-3">
+          <div style="padding:20px; background:var(--c-paper); border-radius:var(--radius); border:1px solid var(--c-border); border-left:3px solid var(--c-accent);">
+            <div style="font-size:0.78rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--c-accent); margin-bottom:8px;">Prioritaire</div>
+            <div style="font-size:0.9rem; font-weight:600; margin-bottom:6px;">Réviser Histoire avant le 18 nov.</div>
+            <p style="font-size:0.8rem; color:var(--c-muted); line-height:1.6;">Tu as besoin d'un 5.5 minimum pour remonter ta branche au-dessus de 4.0. Commence par les fiches Gradely.</p>
+            <a href="training.html" class="btn btn-outline btn-sm" style="margin-top:14px;">Voir les quiz</a>
+          </div>
+          <div style="padding:20px; background:var(--c-paper); border-radius:var(--radius); border:1px solid var(--c-border); border-left:3px solid #b07d2a;">
+            <div style="font-size:0.78rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#b07d2a; margin-bottom:8px;">A surveiller</div>
+            <div style="font-size:0.9rem; font-weight:600; margin-bottom:6px;">Physique : 2 notes sous 4.0</div>
+            <p style="font-size:0.8rem; color:var(--c-muted); line-height:1.6;">Ta moyenne de 4.5 est fragile. Un TP supplémentaire te permettrait de stabiliser la branche avant les examens.</p>
+            <a href="ai.html" class="btn btn-outline btn-sm" style="margin-top:14px;">Demander à l'IA</a>
+          </div>
+          <div style="padding:20px; background:var(--c-paper); border-radius:var(--radius); border:1px solid var(--c-border); border-left:3px solid #2a7a4b;">
+            <div style="font-size:0.78rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#2a7a4b; margin-bottom:8px;">Point fort</div>
+            <div style="font-size:0.9rem; font-weight:600; margin-bottom:6px;">Français : objectif 5.5 atteint</div>
+            <p style="font-size:0.8rem; color:var(--c-muted); line-height:1.6;">Bravo ! Ta progression en français est constante. Maintiens le cap avec 2 entrainements par semaine.</p>
+            <a href="stats.html" class="btn btn-outline btn-sm" style="margin-top:14px;">Voir stats</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</div>
+<script src="animations.js"></script>
+</body>
+</html>

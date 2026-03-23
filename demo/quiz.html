@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradely — Quiz : Révolution française</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="quiz-shell">
+
+  <!-- TOP BAR -->
+  <div class="quiz-topbar">
+    <div style="display:flex; align-items:center; gap:16px;">
+      <a href="training.html" class="btn btn-ghost btn-sm" style="gap:6px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Quitter
+      </a>
+      <div class="divider-v" style="height:24px;"></div>
+      <div>
+        <div style="font-size:0.95rem; font-weight:700; letter-spacing:-0.02em;">Révolution française</div>
+        <div style="font-size:0.72rem; color:var(--c-muted);">Histoire &nbsp;·&nbsp; Gymnase S2 2024</div>
+      </div>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:20px;">
+      <!-- Progress indicator -->
+      <div style="display:flex; align-items:center; gap:8px;">
+        <div style="display:flex; gap:4px;">
+          <div style="width:24px; height:6px; background:#2a7a4b; border-radius:3px;"></div>
+          <div style="width:24px; height:6px; background:#2a7a4b; border-radius:3px;"></div>
+          <div style="width:24px; height:6px; background:var(--c-accent); border-radius:3px;"></div>
+          <div style="width:24px; height:6px; background:var(--c-border); border-radius:3px;"></div>
+          <div style="width:24px; height:6px; background:var(--c-border); border-radius:3px;"></div>
+        </div>
+        <span style="font-family:var(--f-mono); font-size:0.82rem; color:var(--c-muted);">3 / 20</span>
+      </div>
+
+      <!-- Score live -->
+      <div style="display:flex; align-items:center; gap:12px; background:var(--c-paper); border:1px solid var(--c-border); border-radius:var(--radius); padding:6px 14px;">
+        <div style="text-align:center;">
+          <div style="font-family:var(--f-mono); font-size:0.78rem; font-weight:600; color:#2a7a4b;">2</div>
+          <div style="font-size:0.6rem; color:var(--c-muted);">Justes</div>
+        </div>
+        <div class="divider-v" style="height:20px;"></div>
+        <div style="text-align:center;">
+          <div style="font-family:var(--f-mono); font-size:0.78rem; font-weight:600; color:var(--c-accent);">0</div>
+          <div style="font-size:0.6rem; color:var(--c-muted);">Faux</div>
+        </div>
+        <div class="divider-v" style="height:20px;"></div>
+        <div style="text-align:center;">
+          <div style="font-family:var(--f-mono); font-size:0.78rem; font-weight:600; color:var(--c-muted);">17</div>
+          <div style="font-size:0.6rem; color:var(--c-muted);">Restants</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="quiz-progress-bar">
+    <div class="quiz-progress-fill" style="width: 15%;"></div>
+  </div>
+
+  <!-- MAIN QUIZ AREA -->
+  <div class="quiz-main">
+
+    <div style="max-width:680px; width:100%; display:flex; flex-direction:column; gap:20px;">
+
+      <!-- Question card -->
+      <div class="quiz-card reveal">
+        <div class="quiz-meta">
+          <span class="quiz-q-num">Question 3 sur 20</span>
+          <div class="quiz-timer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            01:24
+          </div>
+        </div>
+
+        <div style="font-size:0.8rem; color:var(--c-muted); margin-bottom:10px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; font-size:0.72rem;">Histoire — Révolution française</div>
+
+        <div class="quiz-question">
+          Quelle prison symbolique a été prise d'assaut par le peuple le 14 juillet 1789, marquant le début officiel de la Révolution ?
+        </div>
+
+        <div class="quiz-options">
+          <div class="quiz-option">
+            <div class="quiz-option-letter">A</div>
+            Le Louvre
+          </div>
+          <div class="quiz-option">
+            <div class="quiz-option-letter">B</div>
+            Le Château de Versailles
+          </div>
+          <div class="quiz-option selected">
+            <div class="quiz-option-letter">C</div>
+            La Bastille
+          </div>
+          <div class="quiz-option">
+            <div class="quiz-option-letter">D</div>
+            La Conciergerie
+          </div>
+        </div>
+
+        <div class="quiz-actions">
+          <span class="quiz-hint">Clique sur une réponse pour valider</span>
+          <div style="display:flex; gap:10px;">
+            <button class="btn btn-ghost btn-sm">Passer</button>
+            <a href="quiz.html" class="btn btn-primary">
+              Valider
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Previous answer feedback (question 2 was correct) -->
+      <div class="reveal" style="background:#dcf0e6; border:1.5px solid #a8d8be; border-radius:var(--radius-lg); padding:16px 20px; display:flex; align-items:flex-start; gap:14px;" data-delay="200">
+        <div style="width:28px; height:28px; background:#2a7a4b; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div style="font-size:0.85rem; font-weight:700; color:#2a7a4b; margin-bottom:4px;">Question 2 — Bonne réponse !</div>
+          <div style="font-size:0.82rem; color:#1e5c38; line-height:1.6;">
+            La Déclaration des droits de l'Homme et du Citoyen a bien été adoptée le <strong>26 août 1789</strong>. Ce texte fondateur proclamait l'égalité et les libertés fondamentales.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- Result modal (shown after last question - hidden by default) -->
+<div id="result-overlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:500; display:flex; align-items:center; justify-content:center;">
+  <div style="background:var(--c-surface); border-radius:var(--radius-lg); padding:48px; max-width:480px; width:90%; text-align:center;">
+    <div style="width:60px; height:60px; background:#dcf0e6; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2a7a4b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h2 style="font-family:var(--f-display); font-size:2rem; letter-spacing:-0.02em; margin-bottom:8px;">Quiz terminé !</h2>
+    <p style="color:var(--c-muted); margin-bottom:28px;">Révolution française — Histoire</p>
+    <div style="font-family:var(--f-mono); font-size:3.5rem; font-weight:500; color:#2a7a4b; margin-bottom:4px;">16/20</div>
+    <p style="color:var(--c-muted); font-size:0.9rem; margin-bottom:28px;">80% de bonnes réponses — Excellent travail !</p>
+    <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+      <a href="training.html" class="btn btn-outline">Retour aux quiz</a>
+      <a href="quiz.html" class="btn btn-primary">Refaire le quiz</a>
+    </div>
+  </div>
+</div>
+
+<script src="animations.js"></script>
+</body>
+</html>
